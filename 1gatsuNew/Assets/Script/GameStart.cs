@@ -19,9 +19,9 @@ public class GameStart : MonoBehaviour
 
     public void OnStart()
     {
-        if (Input.GetKeyDown("joystick button 0"))
-        {
-            SceneManager.LoadScene("SampleScene");
-        }
+        //if (Input.GetKeyDown("joystick button 0"))
+        //{
+        SceneManager.LoadScene("SampleScene");
+        //}
     }
 }
