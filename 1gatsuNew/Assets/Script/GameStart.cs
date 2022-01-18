@@ -24,4 +24,20 @@ public class GameStart : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
         //}
     }
+
+    public void OnEnd()
+    {
+        //if (Input.GetKeyDown("joystick button 0"))
+        //{
+        SceneManager.LoadScene("End");
+        //}
+    }
+
+    public void OnTitle()
+    {
+        //if (Input.GetKeyDown("joystick button 0"))
+        //{
+        SceneManager.LoadScene("Title");
+        //}
+    }
 }
