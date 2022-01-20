@@ -1,18 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+
+[RequireComponent(typeof(NavMeshAgent))]
 
 public class NPC : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Transform point;
+    [SerializeField] private Animator animator;
+    private NavMeshAgent agent;
+
     void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
+        agent.destination = point.position;
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+            animator.SetFloat("speed", agent.velocity.magnitude);
     }
 }
